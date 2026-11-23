@@ -11,57 +11,69 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main class="page">
+<div class="layout">
 
-<header>
+<aside class="side">
 <p class="kicker">AI security research</p>
 <h1>Mohammed Saad Shareef</h1>
-<p class="lede">Final-year Computer Science student at Lords Institute of Engineering and Technology, Hyderabad. I study what machine-learning artifacts leak about how they were built, and whether defenses hold up once the attacker adapts.</p>
-<ul class="contact">
-<li><a href="mailto:saad.mohammed.shareef@gmail.com">saad.mohammed.shareef@gmail.com</a></li>
-<li><a href="https://github.com/saad-research">GitHub</a></li>
-<li><a href="https://www.linkedin.com/in/mohammed-saad-shareef/">LinkedIn</a></li>
+<p class="role">Final-year B.E. Computer Science<br>Lords Institute of Engineering and Technology, Hyderabad</p>
+<p class="bio">I study what machine-learning artifacts leak about how they were built, and whether defenses hold up once the attacker adapts.</p>
+<ul class="links">
+<li><span class="label">Email</span><a href="mailto:saad.mohammed.shareef@gmail.com">saad.mohammed.shareef@gmail.com</a></li>
+<li><span class="label">GitHub</span><a href="https://github.com/saad-research">GitHub</a></li>
+<li><span class="label">LinkedIn</span><a href="https://www.linkedin.com/in/mohammed-saad-shareef/">LinkedIn</a></li>
 </ul>
-<p class="note">Open to research internships and collaborations, remote now or on site from January 2027, and to MS research positions for Fall 2027.</p>
-</header>
+<p class="open"><b>Open to</b>Research internships and collaborations, remote now or on site from January 2027, and MS research positions for Fall 2027.</p>
+</aside>
+
+<main class="main">
 
 <section>
-<h2><span class="num">01</span>Papers</h2>
-
-<div class="entry">
-<div class="year">2026</div>
-<div>
-<p class="title"><a href="adaptrack/">AdapTrack: Task Provenance from Merged LoRA Weights Alone</a></p>
-<p class="meta">M. S. Shareef. ATTRIB Workshop, NeurIPS 2026. <span class="status">Accepted</span></p>
-<p class="desc">A passive attack that tells which task families went into a merged LoRA adapter from its published weights alone (AUC 0.97), and a defense that looks like it works only until the attacker retrains.</p>
-<p class="links"><a href="adaptrack/">page</a><a href="files/adaptrack-neurips-attrib-2026.pdf">paper</a><a href="files/adaptrack-poster.pdf">poster</a><a href="https://github.com/saad-research/AdapTrack">code</a></p>
-</div>
-</div>
-
-<div class="entry">
-<div class="year">2026</div>
-<div>
-<p class="title">Aadhaar-Sentinel: Dual-Metric Anomaly Detection for India's Identity Infrastructure</p>
-<p class="meta">M. S. Shareef. IEEE BigData 2026, Industry and Government track (short paper). <span class="status">Accepted</span></p>
-<p class="desc">A reproducible pipeline over 4.9M public UIDAI records that separates capacity stress from identity-integrity lag, released with the IndiaID-Bench dataset.</p>
-<p class="links"><a href="https://doi.org/10.5281/zenodo.21507204">dataset (Zenodo)</a></p>
-</div>
-</div>
-
-<div class="entry">
-<div class="year">2026</div>
-<div>
-<p class="title">Threat-Driven Systematic Review of Privacy-Preserving Machine Learning</p>
-<p class="meta">M. S. Shareef, S. A. Ahmed. Journal of Cybersecurity, Oxford University Press. <span class="status pending">Under review</span></p>
-<p class="desc">Maps five adversarial vectors to differential privacy, federated learning, secure multi-party computation and homomorphic encryption, and benchmarks six open-source frameworks.</p>
-</div>
-</div>
+<h2><span class="num">01</span>News</h2>
+<ul class="news">
+<li><span class="date">Dec 2026</span><span>Presenting <a href="adaptrack/">AdapTrack</a> remotely at the ATTRIB workshop, NeurIPS 2026 (12 December).</span></li>
+<li><span class="date">2026</span><span>Aadhaar-Sentinel accepted at IEEE BigData 2026, Industry and Government track.</span></li>
+<li><span class="date">Sep 2026</span><span>AdapTrack accepted at the ATTRIB workshop, NeurIPS 2026.</span></li>
+</ul>
 </section>
 
 <section>
-<h2><span class="num">02</span>In progress</h2>
-<div class="entry">
-<div class="year">now</div>
+<h2><span class="num">02</span>Papers</h2>
+
+<article class="paper">
+<a class="thumb" href="adaptrack/"><img src="adaptrack/thumb.png" alt="Bar chart: a defense scores 0.36 against a fixed attacker and 0.88 against a retrained one" width="1200" height="591"></a>
+<div>
+<p class="title"><a href="adaptrack/">AdapTrack: Task Provenance from Merged LoRA Weights Alone</a></p>
+<p class="meta">M. S. Shareef. ATTRIB Workshop, NeurIPS 2026 <span class="tag">Accepted</span></p>
+<p class="desc">A passive attack that tells which task families went into a merged LoRA adapter from its published weights alone (AUC 0.97), and a defense that looks like it works only until the attacker retrains.</p>
+<p class="plinks"><a href="adaptrack/">project page</a><a href="files/adaptrack-neurips-attrib-2026.pdf">paper</a><a href="files/adaptrack-poster.pdf">poster</a><a href="https://github.com/saad-research/AdapTrack">code</a></p>
+</div>
+</article>
+
+<article class="paper">
+<a class="thumb type" href="https://doi.org/10.5281/zenodo.21507204"><span class="big">IEEE<br>BigData '26</span><span class="small">Industry &amp; Government</span></a>
+<div>
+<p class="title">Aadhaar-Sentinel: Dual-Metric Anomaly Detection for India's Identity Infrastructure</p>
+<p class="meta">M. S. Shareef. IEEE BigData 2026, Industry and Government track, short paper <span class="tag">Accepted</span></p>
+<p class="desc">A reproducible pipeline over 4.9M public UIDAI records that separates capacity stress from identity-integrity lag, released with the IndiaID-Bench dataset.</p>
+<p class="plinks"><a href="https://doi.org/10.5281/zenodo.21507204">dataset (Zenodo)</a></p>
+</div>
+</article>
+
+<article class="paper">
+<div class="thumb type"><span class="big" style="font-size: 18px">Journal of<br>Cybersecurity</span><span class="small">Oxford University Press</span></div>
+<div>
+<p class="title">Threat-Driven Systematic Review of Privacy-Preserving Machine Learning</p>
+<p class="meta">M. S. Shareef, S. A. Ahmed. Journal of Cybersecurity <span class="tag pending">Under review</span></p>
+<p class="desc">Maps five adversarial vectors to differential privacy, federated learning, secure multi-party computation and homomorphic encryption, and benchmarks six open-source frameworks.</p>
+</div>
+</article>
+</section>
+
+<section>
+<h2><span class="num">03</span>In progress</h2>
+<div class="row">
+<span class="date">now</span>
 <div>
 <p class="title">Do RAG privacy defenses compose?</p>
 <p class="desc">Whether retrieval-augmented generation privacy defenses that hold on their own still hold when deployed together.</p>
@@ -70,16 +82,16 @@
 </section>
 
 <section>
-<h2><span class="num">03</span>Projects and data</h2>
-<div class="entry">
-<div class="year">2026</div>
+<h2><span class="num">04</span>Projects and data</h2>
+<div class="row">
+<span class="date">2026</span>
 <div>
 <p class="title"><a href="https://doi.org/10.5281/zenodo.21507204">IndiaID-Bench</a></p>
 <p class="desc">A 32,898-row benchmark of Aadhaar enrolment anomalies, CC BY 4.0.</p>
 </div>
 </div>
-<div class="entry">
-<div class="year">2025</div>
+<div class="row">
+<span class="date">2025</span>
 <div>
 <p class="title"><a href="https://github.com/saad-research/Privguard_A-Privacy-Gateway-for-LLMs">PrivGuard</a></p>
 <p class="desc">A security proxy for LLM apps that detects PII and secrets in prompts and routes each request to block, redact, a local model or the cloud.</p>
@@ -89,5 +101,7 @@
 
 <footer>Updated November 2026</footer>
 </main>
+
+</div>
 </body>
 </html>
