@@ -3,64 +3,91 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AdapTrack: Task Provenance from Merged LoRA Weights Alone</title>
-<meta name="description" content="AdapTrack (ATTRIB Workshop, NeurIPS 2026): recovering which task families went into a merged LoRA adapter from its weights alone. Paper, poster, code.">
+<title>Mohammed Saad Shareef</title>
+<meta name="description" content="Mohammed Saad Shareef: AI security research. Papers, projects and contact.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&display=swap">
-<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&display=swap">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <main class="page">
 
-<a class="back" href="../">← Mohammed Saad Shareef</a>
+<header>
+<p class="kicker">AI security research</p>
+<h1>Mohammed Saad Shareef</h1>
+<p class="lede">Final-year Computer Science student at Lords Institute of Engineering and Technology, Hyderabad. I study what machine-learning artifacts leak about how they were built, and whether defenses hold up once the attacker adapts.</p>
+<ul class="contact">
+<li><a href="mailto:saad.mohammed.shareef@gmail.com">saad.mohammed.shareef@gmail.com</a></li>
+<li><a href="https://github.com/saad-research">GitHub</a></li>
+<li><a href="https://www.linkedin.com/in/mohammed-saad-shareef/">LinkedIn</a></li>
+</ul>
+<p class="note">Open to research internships and collaborations, remote now or on site from January 2027, and to MS research positions for Fall 2027.</p>
+</header>
 
-<p class="kicker" style="margin-top: 28px">ATTRIB Workshop · NeurIPS 2026</p>
-<h1 class="paper-title">AdapTrack: Task Provenance from Merged LoRA Weights Alone</h1>
-<p class="authors"><a href="../">Mohammed Saad Shareef</a></p>
-<p class="venue">Lords Institute of Engineering and Technology, Hyderabad</p>
+<section>
+<h2><span class="num">01</span>Papers</h2>
 
-<div class="buttons">
-<a href="../files/adaptrack-neurips-attrib-2026.pdf">Paper (PDF)</a>
-<a href="../files/adaptrack-poster.pdf">Poster</a>
-<a href="https://github.com/saad-research/AdapTrack">Code and results</a>
-<span>arXiv: coming soon</span>
+<div class="entry">
+<div class="year">2026</div>
+<div>
+<p class="title"><a href="adaptrack/">AdapTrack: Task Provenance from Merged LoRA Weights Alone</a></p>
+<p class="meta">M. S. Shareef. ATTRIB Workshop, NeurIPS 2026. <span class="status">Accepted</span></p>
+<p class="desc">A passive attack that tells which task families went into a merged LoRA adapter from its published weights alone (AUC 0.97), and a defense that looks like it works only until the attacker retrains.</p>
+<p class="links"><a href="adaptrack/">page</a><a href="files/adaptrack-neurips-attrib-2026.pdf">paper</a><a href="files/adaptrack-poster.pdf">poster</a><a href="https://github.com/saad-research/AdapTrack">code</a></p>
+</div>
 </div>
 
-<section>
-<h2><span class="num">01</span>Abstract</h2>
-<p>Merged LoRA adapters are published as weights, not as a list of what they were trained on. We ask whether that list is recoverable from the weights alone, as a question of task-family provenance rather than contributive attribution. Our adversary is passive: it observes only the merged parameter update — no queries to the model, no merge weights, no metadata, no cooperation from the publisher — and computes summary statistics of each module's singular spectrum. On a pool of 96 adapters spanning four task families, a classifier over those statistics determines whether a given family was among a merge's constituents at AUC 0.969 and 0.975 for two targets, with true-positive rates of 0.85 and 0.90 at zero false positives, under adapter-level holdout, cluster bootstrap intervals over adapters, and a permutation null. Examining what merging preserves, we find that among the predictors we test, only the one for total per-module magnitude tracks composition closely (median within-module R² = 0.96); the nuclear norm follows at 0.83 and every finer spectral statistic falls below 0.41. We then evaluate two defenses against an adaptive attacker who retrains on defended features; neither reduces the attack below 0.87 AUC, against an undefended baseline of 0.93 on the same subset. One of them, canonicalization, appears to drive the attack to 0.36 — below chance — when scored against a fixed attacker, where a retrained attacker still reaches 0.88.</p>
-</section>
+<div class="entry">
+<div class="year">2026</div>
+<div>
+<p class="title">Aadhaar-Sentinel: Dual-Metric Anomaly Detection for India's Identity Infrastructure</p>
+<p class="meta">M. S. Shareef. IEEE BigData 2026, Industry and Government track (short paper). <span class="status">Accepted</span></p>
+<p class="desc">A reproducible pipeline over 4.9M public UIDAI records that separates capacity stress from identity-integrity lag, released with the IndiaID-Bench dataset.</p>
+<p class="links"><a href="https://doi.org/10.5281/zenodo.21507204">dataset (Zenodo)</a></p>
+</div>
+</div>
 
-<section>
-<h2><span class="num">02</span>Results at a glance</h2>
-<div class="numbers">
-<div><b>0.969</b><span>AUC, medical target</span></div>
-<div><b>0.975</b><span>AUC, legal target</span></div>
-<div><b>0.36 → 0.88</b><span>a defense against a fixed attacker, then a retrained one</span></div>
+<div class="entry">
+<div class="year">2026</div>
+<div>
+<p class="title">Threat-Driven Systematic Review of Privacy-Preserving Machine Learning</p>
+<p class="meta">M. S. Shareef, S. A. Ahmed. Journal of Cybersecurity, Oxford University Press. <span class="status pending">Under review</span></p>
+<p class="desc">Maps five adversarial vectors to differential privacy, federated learning, secure multi-party computation and homomorphic encryption, and benchmarks six open-source frameworks.</p>
+</div>
 </div>
 </section>
 
 <section>
-<h2><span class="num">03</span>Poster</h2>
-<figure class="poster-thumb">
-<a href="../files/adaptrack-poster.pdf"><img src="poster-preview.jpg" alt="AdapTrack poster" width="962" height="1339"></a>
-<figcaption>Presented remotely at the ATTRIB workshop, 12 December 2026. Click for the full PDF.</figcaption>
-</figure>
+<h2><span class="num">02</span>In progress</h2>
+<div class="entry">
+<div class="year">now</div>
+<div>
+<p class="title">Do RAG privacy defenses compose?</p>
+<p class="desc">Whether retrieval-augmented generation privacy defenses that hold on their own still hold when deployed together.</p>
+</div>
+</div>
 </section>
 
 <section>
-<h2><span class="num">04</span>Cite</h2>
-<pre>@inproceedings{shareef2026adaptrack,
-  title     = {AdapTrack: Task Provenance from Merged {LoRA} Weights Alone},
-  author    = {Shareef, Mohammed Saad},
-  booktitle = {ATTRIB Workshop (Attributing Model Behavior at Scale), NeurIPS},
-  year      = {2026},
-  url       = {https://saad-research.github.io/adaptrack/}
-}</pre>
+<h2><span class="num">03</span>Projects and data</h2>
+<div class="entry">
+<div class="year">2026</div>
+<div>
+<p class="title"><a href="https://doi.org/10.5281/zenodo.21507204">IndiaID-Bench</a></p>
+<p class="desc">A 32,898-row benchmark of Aadhaar enrolment anomalies, CC BY 4.0.</p>
+</div>
+</div>
+<div class="entry">
+<div class="year">2025</div>
+<div>
+<p class="title"><a href="https://github.com/saad-research/Privguard_A-Privacy-Gateway-for-LLMs">PrivGuard</a></p>
+<p class="desc">A security proxy for LLM apps that detects PII and secrets in prompts and routes each request to block, redact, a local model or the cloud.</p>
+</div>
+</div>
 </section>
 
-<footer>Questions: <a href="mailto:saad.mohammed.shareef@gmail.com">saad.mohammed.shareef@gmail.com</a></footer>
+<footer>Updated November 2026</footer>
 </main>
 </body>
 </html>
